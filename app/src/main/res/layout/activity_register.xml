@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_top_gradient"
+    tools:context=".RegisterActivity">
+
+    <!-- ✅ Title in Gradient Area -->
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Your Account"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- White Rounded Card Touching Bottom -->
+    <LinearLayout
+        android:id="@+id/whiteCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerTitle"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/white_rounded_bg"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_marginTop="40dp">
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/fullNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Full Name"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Phone or Gmail -->
+        <EditText
+            android:id="@+id/emailPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Phone or Gmail"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:id="@+id/confirmPasswordInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- SIGN UP Button -->
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="SIGN UP"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_gradient"/>
+    </LinearLayout>
+
+    <!-- Bottom Text -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <TextView
+            android:id="@+id/haveAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don’t have account?"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/signInLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/gradient_start"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>
